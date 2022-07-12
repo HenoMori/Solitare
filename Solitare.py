@@ -1,4 +1,5 @@
 import random
+#Solitaire
 import os
 def main(reset):
     global deck
