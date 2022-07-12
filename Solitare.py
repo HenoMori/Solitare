@@ -165,14 +165,16 @@ def main(reset):
         print()
         return localDeck
     os.system("cls")
-    print("Syntax for usage:")
-    print("Use [x, y] format to move a card from pile x to pile y.")
-    print("Use [x, A] to move a card to an aces pile.")
-    print("Use [D] to refresh the top of the deck.")
-    print("Use [H] to place from the top of the deck.")
-    print("Use [S] to shuffle all hidden cards, including the deck.")
-    print("Use [C] to put all available cards into the aces piles.")
-    print("Use [end] to end the game.\n")
+    def syntax():
+        print("Syntax for usage:")
+        print("Use [x, y] format to move a card from pile x to pile y.")
+        print("Use [x, A] to move a card to an aces pile.")
+        print("Use [D] to refresh the top of the deck.")
+        print("Use [H] to place from the top of the deck.")
+        print("Use [S] to shuffle all hidden cards, including the deck.")
+        print("Use [C] to put all available cards into the aces piles.")
+        print("Use [I] to view these instructions again.")
+        print("Use [end] to end the game.\n")
     end = False
     while True:
         while True:
@@ -193,6 +195,9 @@ def main(reset):
                     else:
                         deck[0].append(deck[0].pop(0))
                         continue
+                if move.lower()[:1] == "i":
+                    syntax()
+                    continue
                 if move.lower()[:1] == "c":
                     deck = complete(deck)
                     continue
