@@ -39,56 +39,7 @@ def main(reset):
             pile7.append(deck.pop())
         shown = [1, 1, 1, 1, 1, 1, 1, 1]
         deck = [deck, pile1, pile2, pile3, pile4, pile5, pile6, pile7, spades, clubs, diamonds, hearts]
-    #def displayCard(card):
-    #    display = ""
-    #    if card[2] == 1:
-    #        display += "Ace of "
-    #    elif card[2] < 11:
-    #        display += str(card[2]) + " of "
-    #    else:
-    #        if card[2] == 11:
-    #            display += "Jack of "
-    #        elif card[2] == 12:
-    #            display += "Queen of "
-    #        else:
-    #            display += "King of "
-    #    if card[1] == "S":
-    #        display += "Spades"
-    #    elif card[1] == "C":
-    #        display += "Clubs"
-    #    elif card[1] == "H":
-    #        display += "Hearts"
-    #    else:
-    #        display += "Diamonds"
-    #    return display
     global showboard
-    #def showboard(localDeck, localShown):
-    #    os.system("cls")
-    #    for i in range(1, 8):
-    #        print("Pile "+str(i)+":")
-    #        line = ""
-    #        if localShown[i] > 0:
-    #            for j in range(len(localDeck[i])-localShown[i]):
-    #                line += "####### "
-    #            line += displayCard(localDeck[i][localShown[i]-1])
-    #            for j in range(localShown[i]-2, -1, -1):
-    #                if j >= len(localDeck[i]):
-    #                    breakpoint()
-    #                line += ", "+displayCard(localDeck[i][j])
-    #        print(line)
-    #    print("\nAce piles:")
-    #    print("Spades:")
-    #    print(displayCard(localDeck[8][0]))
-    #    print("\nClubs:")
-    #    print(displayCard(localDeck[9][0]))
-    #    print("\nDiamonds:")
-    #    print(displayCard(localDeck[10][0]))
-    #    print("\nHearts:")
-    #    print(displayCard(localDeck[11][0]))
-    #    print("\nDeck:")
-    #    print("Cards in deck: " + str(len(localDeck[0])))
-    #    if len(localDeck[0]) > 0:
-    #        print(displayCard(localDeck[0][0]))
     def displayCard(card):
         display = ""
         if card[2] == 0:
