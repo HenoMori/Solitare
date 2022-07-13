@@ -1,7 +1,4 @@
-# Solitare
 import random
-# No! My comment is better
-#Solitaire
 import os
 def main(reset):
     global deck
