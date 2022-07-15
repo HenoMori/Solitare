@@ -174,7 +174,8 @@ def main(reset):
         print("Use [S] to shuffle all hidden cards, including the deck.")
         print("Use [C] to put all available cards into the aces piles.")
         print("Use [I] to view these instructions again.")
-        print("Use [end] to end the game.\n")
+        print("Use [N] to start a new game.")
+        print("Use [E] to end the game.\n")
     end = False
     while True:
         while True:
@@ -185,9 +186,11 @@ def main(reset):
                 os.system("cls")
                 if len(move) == 0:
                     raise ValueError
-                if move.lower() == "end":
+                if move.lower()[:1] == "e":
                     end = True
                     break
+                if move.lower()[:1] == "n":
+                    main(True)
                 if move[:1].upper() == "D":
                     if move.lower() == "debug":
                         breakpoint()
