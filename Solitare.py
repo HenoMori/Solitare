@@ -190,7 +190,9 @@ def main(reset):
                     end = True
                     break
                 if move.lower()[:1] == "n":
-                    main(True)
+                    end = True
+                    new = True
+                    break
                 if move[:1].upper() == "D":
                     if move.lower() == "debug":
                         breakpoint()
@@ -227,6 +229,8 @@ def main(reset):
             except:
                 print("Something went wrong. Ensure you use x, y formatting and that you use valid numbers.")
         if end:
+            if new:
+                main(True)
             raise SystemExit
         target = findTarget()
         moving = []
